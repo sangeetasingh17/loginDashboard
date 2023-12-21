@@ -15,7 +15,14 @@ function validateLogin() {
         alert('Please enter a valid password with an uppercase letter, a number, and no special characters other than @.');
         return;
     }
-    window.location.href = 'success.html';
+
+    if (password === 'SmartServTest@123')
+    {
+        window.location.href = 'dashboard.html';
+    } else
+    {
+        alert('Incorrect password. Please try again.');
+    }
 }
 
 function validateEmail(email) {
